@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  position: relative;
+}
+.post-header {
+  position: relative;
+}
+.container {
+  width: 600px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+}
+p {
+  line-height: 1.5;
+  /* text-transform: uppercase; */
+  font-style: italic;
+}
+h2 + p::first-line {
+  color: orange;
+}
+p,
+h1 {
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+h1 {
+  color: #1098ad;
+}
+h1::first-letter {
+  font-size: 60px;
+}
+li:first-child {
+  color: #1098ad;
+}
+
+li:last-child {
+  color: blueviolet;
+}
+.post-img {
+  margin: 20px 0px;
+  width: 100%;
+  height: auto;
+}
+li:first-child,
+li:last-child,
+li:nth-child(2) {
+  font-weight: bold;
+}
+li:nth-child(2) {
+  color: red;
+}
+li {
+  display: inline;
+}
+a:any-link {
+  color: #1098ad;
+  text-decoration: none;
+}
+a:link:last-child {
+  margin-right: 0;
+}
+nav a:link {
+  margin: 10px 20px 10px 0px;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: underline orange;
+}
+.prio3 {
+  color: chartreuse !important;
+}
+/* !important is the highest priority but should not use often only 
+use when not firgue out what priority */
+#prio2 {
+  color: aqua;
+}
+
+button {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+h2 {
+  background-color: darkgrey;
+  position: relative;
+}
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px 10px;
+  position: absolute;
+  top: -9px;
+  right: -15px;
+}
+/* priority(lowToHigh: universal selector(*)->element selector
+->class->id->inline style-> declaration marked 
+if in the same level css will pick the last appear code
+*/
+
+/* 
+abbriviate: viet tat 
+alternative: thay the
+impractical: khong thuc te
+purely: hoan toan
+entire: toan bo
+absolute: tuyet doi
+offset: bu lai
+overlap: chong len nhau
+adjacent: lien ke
+*/
