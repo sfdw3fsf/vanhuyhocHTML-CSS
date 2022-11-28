@@ -102,6 +102,7 @@ h2::after {
   padding: 5px 10px;
   position: absolute;
   top: -9px;
+
   right: -15px;
 }
 /* priority(lowToHigh: universal selector(*)->element selector
