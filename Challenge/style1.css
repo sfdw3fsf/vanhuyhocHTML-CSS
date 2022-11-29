@@ -174,14 +174,3 @@ body {
   display: flex;
   gap: 15px;
 }
-article {
-  display: grid;
-  grid-template-columns: 255px 1fr 1fr;
-  column-gap: 20px;
-}
-.product-title {
-  grid-column: 1/-1;
-}
-.add-cart {
-  grid-column: 1/-1;
-}
