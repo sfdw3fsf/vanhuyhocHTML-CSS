@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+      /* Main Color: #087f5b
+      Grey color:#495057
+      Lighter color: #0ca678;
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+
+            /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        color: #495057;
+        line-height: 1;
+      }
+      img {
+        border-radius: 8px;
+        width: 200px;
+        height: 200px;
+        transform: scale(1.5);
+        box-shadow: 0 12px 24px rgb(0, 0, 0, 0.5);
+      }
+      .carousel {
+        width: 800px;
+        margin: 100px auto;
+        background-color: #087f5b;
+        padding: 32px 48px 32px 86px;
+
+        border-radius: 8px;
+        display: flex;
+        gap: 86px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      p {
+        color: #fff;
+      }
+      .text {
+        line-height: 1.5;
+        font-weight: 500;
+        margin-bottom: 32px;
+      }
+      .author {
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+      .job {
+        font-size: 12px;
+      }
+      .btn {
+        top: 50%;
+        /* move it's own % width/height horizontal/vertical */
+        box-shadow: 0 12px 24px rgb(0, 0, 0, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border: none;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        cursor: pointer;
+      }
+      .icon {
+        stroke: #087f5b;
+        width: 24px;
+        height: 24px;
+      }
+
+      .btn--left {
+        transform: translate(-50%, -50%);
+        left: 0;
+      }
+      .btn--right {
+        transform: translate(50%, -50%);
+        right: 0;
+      }
+      .dots {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        position: absolute;
+        top: 105%;
+        transform: translate(0, 50%);
+      }
+      .dot--trans {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+        cursor: pointer;
+      }
+      .dot--active {
+        background-color: #087f5b;
+      }
+    </style>
+    <title>Carousel</title>
+  </head>
+  <body>
+    <div class="carousel">
+      <figure><img class="image" src="ceo-1.jpg" alt="Maria" /></figure>
+      <blockquote>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias at
+          maxime quisquam nam, molestiae nobis quas earum qui tempore, quod enim
+          aliquam dolore! Aut odio quas omnis assumenda eum adipisci.
+        </p>
+        <p class="author">Leonardio Dicarprio</p>
+        <p class="job">Actor</p>
+      </blockquote>
+      <button class="btn btn--left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn--right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot--trans dot--1 dot--active">&nbsp;</button>
+        <button class="dot--trans dot--2">&nbsp;</button>
+        <button class="dot--trans dot--3">&nbsp;</button>
+        <button class="dot--trans dot--4">&nbsp;</button>
+      </div>
+    </div>
+    <script>
+      const dot1 = document.querySelector(".dot--1");
+      const dot2 = document.querySelector(".dot--2");
+      const dot3 = document.querySelector(".dot--3");
+      const dot4 = document.querySelector(".dot--4");
+      const image = document.querySelector(".image");
+      const right = document.querySelector(".btn--right");
+      const left = document.querySelector(".btn--left");
+      const selectAllDot = document.querySelectorAll(".dot--trans");
+      let n = 1;
+      console.log(selectAllDot);
+      console.log(selectAllDot[0]);
+
+      function removeAllDots() {
+        for (let i = 0; i < selectAllDot.length; i++) {
+          // console.log(selectAllDot.length);
+          console.log(selectAllDot[i]);
+          selectAllDot[i].classList.remove("dot--active");
+        }
+      }
+      right.addEventListener("click", function () {
+        if (n < 4) {
+          n += 1;
+          console.log(`ceo-${n}`);
+          document
+            .querySelector(`.dot--${n - 1}`)
+            .classList.remove("dot--active");
+          document.querySelector(`.dot--${n}`).classList.add("dot--active");
+          image.src = `ceo-${n}.jpg`;
+        }
+      });
+      left.addEventListener("click", function () {
+        if (n > 1) {
+          n -= 1;
+          document
+            .querySelector(`.dot--${n + 1}`)
+            .classList.remove("dot--active");
+          document.querySelector(`.dot--${n}`).classList.add("dot--active");
+          image.src = `ceo-${n}.jpg`;
+        }
+      });
+      dot2.addEventListener("click", function () {
+        image.src = `ceo-2.jpg`;
+        n = 2;
+        removeAllDots();
+        dot2.classList.add("dot--active");
+      });
+      dot3.addEventListener("click", function () {
+        image.src = `ceo-3.jpg`;
+        n = 3;
+        removeAllDots();
+        dot3.classList.add("dot--active");
+      });
+      dot4.addEventListener("click", function () {
+        image.src = `ceo-4.jpg`;
+        n = 4;
+        removeAllDots();
+        dot4.classList.add("dot--active");
+      });
+      dot1.addEventListener("click", function () {
+        image.src = `ceo-1.jpg`;
+        n = 1;
+        removeAllDots();
+        dot1.classList.add("dot--active");
+      });
+    </script>
+  </body>
+</html>
