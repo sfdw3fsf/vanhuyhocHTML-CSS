@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      text-align: center;
+      font-weight: bold;
+      height: 100vh;
+      font-size: 24px;
+      font-family: sans-serif;
+      color: #444;
+      display: grid;
+      grid-template-columns: 80px 400px 1fr 250px;
+      grid-template-rows: 80px 1fr;
+    }
+    nav {
+      background-color: #495057;
+      grid-row: 1/-1;
+      color: #fff;
+      display: flex;
+      /* align-items: center; */
+      justify-content: center;
+    }
+    menu {
+      background-color: #7048e8;
+      grid-column: 2/-1;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* justify-content: center; */
+    }
+    section {
+      background-color: #dee2e6;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      overflow: scroll;
+    }
+    .email {
+      background-color: #868e96;
+      height: 96px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    main {
+      /* background-color: #e3fafc; */
+    }
+    aside {
+      background-color: #dee2e6;
+    }
+    .btn {
+      font-weight: bold;
+      border: none;
+      font-size: 16px;
+      background-color: #5f3dc4;
+      color: white;
+      cursor: pointer;
+      padding: 8px 14px;
+    }
+    button:last-child {
+      background-color: #d6336c;
+      margin-left: auto;
+    }
+
+    nav,
+    menu,
+    main,
+    aside {
+      padding: 24px;
+    }
+  </style>
+  <body>
+    <nav>NAV</nav>
+    <menu>
+      <button class="btn">Next</button>
+      <button class="btn">Reply</button>
+      <button class="btn">Forward</button>
+      <button class="btn">Next</button>
+      <button class="btn">Unread</button>
+    </menu>
+    <section>
+      <div class="email">Email 1</div>
+      <div class="email">Email 2</div>
+      <div class="email">Email 3</div>
+      <div class="email">Email 4</div>
+      <div class="email">Email 5</div>
+      <div class="email">Email 6</div>
+      <div class="email">Email 7</div>
+      <div class="email">Email 8</div>
+      <div class="email">Email 9</div>
+      <div class="email">Email 10</div>
+    </section>
+    <main>MAIN</main>
+    <aside>ASIDE</aside>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-family: "Rubik", sans-serif;
+        color: #444;
+      }
+      nav {
+        font-weight: 700;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        /* margin-bottom: 64px; */
+      }
+      h1 {
+        font-size: 52px;
+        margin-bottom: 32px;
+        line-height: 1.05;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 48px;
+      }
+      .btn:link,
+      .btn:visited {
+        text-decoration: none;
+        background-color: #ff922b;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        display: inline-block;
+        padding: 16px 32px;
+        border-radius: 9px;
+      }
+      h2 {
+        font-size: 44px;
+        margin-bottom: 48px;
+      }
+      section {
+        padding: 96px 0px;
+      }
+      .container {
+        margin: 0 auto;
+        width: 1200px;
+      }
+      header{
+        /* background-image:; */
+        /* background-color: red; */
+        height:100vh;
+        position: relative;
+        background-image:linear-gradient(rgba(31, 30, 30, 0.6),rgba(0, 0, 0, 0.6)), url(ceo-2.jpg);
+        background-size: cover;
+        color: #fff;
+        padding-top: 32px;
+      }
+      .hero--content{
+        /* background-color: aqua; */
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width: 1200px;
+      }
+      .hero-content-inner{
+        width: 50%;;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div>LOGO</div>
+        <div>NAVIGATION</div>
+      </nav>
+      <div class="container hero--content">
+      <div class="hero-content-inner">
+        <h1>A healthy meal delivering to your door, every day</h1>
+        <p>
+          The weather does not make us lazy, your interesing make us happy.
+          Let's write part of your journey with our service.
+        </p>
+        <a href="#" class="btn">Start eating well</a>
+      </div>
+      </div>
+    </header>
+    <section>
+   <div class="container">
+    <h2>Some random heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ratione
+      aliquid, eius quo eum accusantium! Ullam, est libero, totam pariatur
+      dignissimos nostrum asperiores porro, fugiat error quasi doloremque modi
+      ab? Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+      ratione aliquid, eius quo eum accusantium! Ullam, est libero, totam
+      pariatur dignissimos nostrum asperiores porro, fugiat error quasi
+      doloremque modi ab?
+    </p>
+  </section>
+   </div>
+  </body>
+</html>
